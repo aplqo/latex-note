@@ -1,4 +1,18 @@
-\newcommand{keyword}{\color{red}}
+%color definion
+\definecolor{NoteBd}{HTML}{0070a7}
+\definecolor{NoteBg}{HTML}{ffffff}
+\definecolor{NoteTxt}{HTML}{0070a7}
+\definecolor{WarnBd}{HTML}{a94442}
+\definecolor{WarnBg}{HTML}{f2dede}
+\definecolor{WarnTxt}{HTML}{a94442}
+\definecolor{ImportantBd}{HTML}{000000}
+\definecolor{ImportantBg}{HTML}{fcf8e3}
+\definecolor{ImportantTxt}{HTML}{8a6d3b}
+\definecolor{MyNoteBd}{HTML}{000000}
+\definecolor{MyNoteBg}{HTML}{dff0d8}
+\definecolor{MyNoteTxt}{HTML}{3c763d}
+
+\newcommand{\keyword}{\color{red}}
 
 \newenvironment{TemplateNote}[4]
 %****************************************************
@@ -9,10 +23,8 @@
 {
 	\begin{adjustbox}{minipage=\textwidth,cfbox=#1,bgcolor=#2}
 		\begin{flushleft}
-			\begin{Large}
-				{\color{ #3 }\bfseries #4}
-				\medskip 
-			\end{Large} \\
+				{\color{#3}\bfseries #4}
+				\medskip \\
 }
 { 
 \end{flushleft}
@@ -20,30 +32,22 @@
 }
 
 \newenvironment{Note}
-{ \begin{TemplateNote}{black}{white}{black}{Note} }
+{ \begin{TemplateNote}{NoteBd}{NoteBg}{NoteTxt}{Note} }
 { \end{TemplateNote} }
-
-\newenvironment{Attention}
-{
-	\begin{TemplateNote}{black}{white}{black}{Attention}
-}
-{
-	\end{TemplateNote}
-}
 
 \newenvironment{Warn}
 {
-	\begin{TemplateNote}{black}{white}{black}{Warn}
+	\begin{TemplateNote}{WarnBd}{WarnBg}{WarnTxt}{Warn}
 }
 {
 	\end{TemplateNote}
 }
 
 \newenvironment{Important}
-{\begin{TemplateNote}{black}{white}{black}{Important}}
+{\begin{TemplateNote}{ImportantBd}{ImportantBg}{ImportantTxt}{Important}}
 {\end{TemplateNote}}
 
 \newenvironment{MyNote}
-{\begin{TemplateNote}{black}{white}{black}{MyNote}}
+{\begin{TemplateNote}{MyNoteBd}{MyNoteBg}{MyNoteTxt}{MyNote}}
 {\end{TemplateNote}}
 

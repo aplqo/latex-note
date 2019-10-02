@@ -1,4 +1,6 @@
-\newenvironment{TemplateNote}[3]
+\newcommand{keyword}{\color{red}}
+
+\newenvironment{TemplateNote}[4]
 %****************************************************
 % Template Info
 % #1 Titel (optional) default: Information; könnte theoretisch auch leer sein,
@@ -8,7 +10,7 @@
 	\begin{adjustbox}{minipage=\textwidth,cfbox=#1,bgcolor=#2}
 		\begin{flushleft}
 			\begin{Large}
-				{\bfseries #3}
+				{\color{ #3 }\bfseries #4}
 				\medskip 
 			\end{Large} \\
 }
@@ -18,12 +20,12 @@
 }
 
 \newenvironment{Note}
-{ \begin{TemplateNote}{black}{white}{Note} }
+{ \begin{TemplateNote}{black}{white}{black}{Note} }
 { \end{TemplateNote} }
 
 \newenvironment{Attention}
 {
-	\begin{TemplateNote}{black}{white}{Attention}
+	\begin{TemplateNote}{black}{white}{black}{Attention}
 }
 {
 	\end{TemplateNote}

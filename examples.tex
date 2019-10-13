@@ -1,7 +1,12 @@
 %Init
+\newcommand{\ProblemInit}[1]{
 \theoremstyle{definition}
-\newtheorem{Problem}{T}[subsection]
+\newtheorem{Problem}{T}[#1]}
 
 \newenvironment{Solution}
 {\begin{proof}}
 {\end{proof}}
+
+\newenvironment{Examples}
+{例:\begin{enumerate}}
+{\end{enumerate}}
